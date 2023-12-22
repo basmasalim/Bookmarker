@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!---------------------------------  Google Font --------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <!---------------------------------  icon favicon URL --------------------------------->
+    <link rel="icon" href="images/ass.png" />
+    <!---------------------------------  Font Awesome Library ------------------------------- -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!--------------------------------- Template CSS File BootStab ---------------------------------------->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!---------------------------------  Main Template CSS File--------------------------------->
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Bookmarker</title>
+    <!--------------------------------------owl.carousel.js ----------------------------------->
+  </head>
+  <body>
+    <main class="container">
+      <header class="d-flex justify-content-center align-items-center">
+        <h1>Bookmarker</h1>
+      </header>
+      <section class="Bookmarker-body">
+        <div class="fav-book d-flex justify-content-center align-items-center">
+          <h2>
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+        </div>
+        <div class="inputs">
+          <label for="siteName">
+            <i class="fa-solid fa-book-bookmark pe-2"></i> Site Name
+          </label>
+          <input
+            id="siteName"
+            placeholder="Bookmarker Name"
+            class="form-control w-100 mt-2"
+            name="siteName"
+            oninput="validationName()"
+          />
+          <p class="text-danger d-none" id="massageName">
+            The Site Name must contain at least 3 characters.
+          </p>
+
+          <label for="siteURL" class="mt-3">
+            <i class="fa-solid fa-link pe-2"></i> Site URL
+          </label>
+          <input
+            id="siteURL"
+            placeholder="Website URL"
+            class="form-control w-100 mt-2"
+            name="siteURL"
+            oninput="validationURL()"
+          />
+          <p class="text-danger d-none" id="massageURL">
+            Site URL must be a valid one
+          </p>
+          <div class="d-flex justify-content-center align-content-center mt-4">
+            <button id="submit" class="btn btn-submit" onclick="addNewSite()">
+              Submit
+            </button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="row my-3 justify-content-lg-around">
+          <div class="d-flex align-content-start col-lg-8 col-12">
+            <label for="search" class="me-3 mt-1">
+              <i class="fa-solid fa-magnifying-glass">Search</i>
+              
+            </label>
+            <input
+              id="search"
+              type="search"
+              class="form-control"
+              name="search"
+              placeholder="Search"
+              oninput="searchData()"
+            />
+          </div>
+          <div id="deleteall" class="col-lg-4 col-12 my-lg-0 mt-3"></div>
+        </div>
+        <table
+          id="dataTable"
+          class="table table-striped nowrap w-100 text-center"
+        >
+          <thead>
+            <tr class="fw-bold">
+              <td>Index</td>
+              <td>Website Name</td>
+              <td>Visit</td>
+              <td>Delete</td>
+            </tr>
+          </thead>
+
+          <tbody id="tableBookMark" class="bg-white"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- Modal -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,165 @@
+/*-------------------------------  Start Variables ------------------------------- */
+:root {
+  --bg-color: #f7ecde;
+  --title-color: #352e28;
+  --titleBg-color: #fec260;
+  --form-color: #212529;
+  --submit-color: #d1512d;
+  --submitHover-color: RGBA(187, 65, 32, 0.53);
+  --white-color: #fff;
+  --black-color: #000;
+  --table-color: #f8f9fa;
+  --lable-color: #212529;
+  --visitBg-color:#9eb23b;
+  --visitHover-color:#8a9e23;
+
+  --title-font: "Pacifico", cursive;
+  --lable-font: "PT Sans Caption", sans-serif;
+  --title2-font: "Righteous", sans-serif;
+}
+/*-------------------------------  End Variables ------------------------------- */
+/*----------------------------------- Start Selection ----------------------*/
+::selection {
+  background-color: var(--titleBg-color);
+  color: var(--lable-color);
+}
+/*----------------------------------- End Selection ----------------------*/
+/*-------------------------------  Start Global Rules ------------------------------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 40px;
+}
+*,
+*::after,
+*::before {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-color);
+}
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  color: inherit;
+}
+/*-------------------------------  End Global Rules ------------------------------- */
+main {
+  padding-block: 80px;
+}
+header h1 {
+  font-size: 3.8rem;
+  color: var(--title-color);
+  position: relative;
+  font-family: var(--title-font);
+  isolation: isolate;
+  margin-bottom: 70px;
+}
+header h1::before {
+  content: "";
+  position: absolute;
+  background-color: var(--titleBg-color);
+  width: 100%;
+  height: 30%;
+  left: 0;
+  bottom: 10px;
+  z-index: -1;
+  transition: height 1s ease;
+}
+header h1:hover::before {
+  height: 70%;
+}
+.Bookmarker-body {
+  border-block: dotted 2px #212529;
+}
+.Bookmarker-body h2{
+  margin-top: 30px;
+  font-family: var(--title2-font);
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main label{
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: var(--lable-font);
+  color: var(--lable-color);
+}
+main #search,
+main .inputs input{
+  border: 0;
+  outline: 0;
+}
+main #search:focus,
+main .inputs input:focus{
+  box-shadow: 0px 0px 15px 0px var(--titleBg-color);
+  border: solid 1px var(--titleBg-color);
+  border: 0% !important;
+}
+.btn-submit{
+  text-align: center;
+  background-color: var(--submit-color);
+  color: var(--white-color);
+  padding: 8px 48px;
+  border: solid 1px var(--submit-color);
+  border-radius: 10px;
+  font-size: 1.1rem;
+  margin-inline: 80px;
+  margin-bottom: 30px;
+}
+.btn-submit:hover{
+  background-color: var(--submitHover-color);
+}
+main .table{
+  margin-top: 30px;
+  background-color: var(--table-color);
+  font-family: var(--lable-font);
+  color: var(--lable-color);
+  --bs-table-striped-bg: var(--white-color);
+}
+.btn-visit{
+  background-color: var(--visitBg-color);
+}
+.btn-visit:hover{
+  background-color: var(--visitHover-color);
+}
+
+/*-------------------------------  Start Media-Queries ------------------------------- */
+@media (max-width: 768px) {
+  .container {
+    max-width: 80%;
+  }
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+
+  }
+  .Bookmarker-body h2{
+    letter-spacing: 1px;
+    font-size: 1rem;
+  }
+  main .inputs label{
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  main .table  thead{
+    font-size: 13px !important;
+  }
+  .table tbody .btn,
+  .table tbody{
+   font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+
+}
+/*-------------------------------  End Media-Queries ------------------------------- */
