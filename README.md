@@ -1,6 +1,9 @@
 # Bookmarker Web Application
 Bookmarker is a simple web application that allows users to bookmark their favorite sites. Users can input the site name and URL, and the application displays a table with the bookmarked sites. The application features input validation, search functionality, and the ability to delete individual bookmarks or clear all bookmarks.
 
+![image](https://github.com/basmasalim/Bookmarker/assets/125481348/6694359a-c7b2-4bd4-9991-1be1c1367ee7)
+
+
 ## Table of Contents
 - Features
 - Getting Started
@@ -46,7 +49,7 @@ Bookmarker is a simple web application that allows users to bookmark their favor
 To get started with the Bookmarker web application, follow these steps:
 1- Clone the repository:
 ```js
-git clone <>
+git clone <https://github.com/basmasalim/Bookmarker.git>
 ```
 2- Open the `index.html` file in a web browser.
 
@@ -80,7 +83,7 @@ git clone <>
 
 Experience the Tabs Project in action! Click the link below to access the live demo:
 
-### [Live Demo]()
+### [Live Demo](https://basmasalim.github.io/Bookmarker/)
 
 Feel free to interact with the project, browse through different jobs, and explore the user-friendly interface. The live demo provides a hands-on experience to see the Tabs Project in action.
 
